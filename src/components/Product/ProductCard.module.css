@@ -1,0 +1,51 @@
+.card {
+  width: 37vw !important;
+  height: 88vh !important;
+  margin-left: 2vw !important;
+  background-color: rgb(235, 225, 247) !important;
+}
+.cardWrap {
+  max-height: 37vh !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 6.5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.cardImg {
+  height: 50% !important;
+  width: 100% !important;
+}
+
+.cardBtn {
+  color: rgb(79, 186, 248) !important;
+  font-family: inherit !important;
+}
+.cardBtn:hover {
+  background-color: rgb(42, 111, 201) !important;
+  color: aliceblue !important;
+  border-radius: 50% !important;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    width: 90% !important;
+  }
+  .cardDescr {
+    font-size: 10px !important;
+  }
+  .cardBtn {
+    font-size: 10px !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .cardPrice {
+    font-size: 2.5vh !important;
+  }
+}

@@ -1,0 +1,100 @@
+.details-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 20px 0;
+  /* flex-direction: column; */
+  align-items: center;
+  background-image: url("https://barometr.kg/storage/app/uploads/public/5d3/e92/1b8/5d3e921b86bc6247867621.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+#details-img {
+  width: 40vw;
+  height: 60vh;
+  max-width: 500px;
+  border-radius: 2%;
+  animation-name: img;
+  animation-duration: 2s;
+}
+.details-list {
+  background-color: rgba(0, 0, 0, 0.4);
+  min-width: 40vw;
+  max-width: 500px;
+  min-height: 60vh;
+  border-radius: 2%;
+  text-align: center;
+  color: rgb(255, 238, 0);
+  animation-name: list;
+  animation-duration: 2s;
+  font-size: 20px;
+}
+h2 {
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 3em;
+  color: white;
+}
+.price {
+  color: green;
+}
+
+.type {
+  color: orange;
+}
+
+.descr {
+  color: rgb(204, 197, 197);
+}
+
+@keyframes img {
+  0% {
+    opacity: 30%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes list {
+  0% {
+    opacity: 30%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@media screen and (max-width: 546px) {
+  .details-list {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 456px) {
+  .details-list {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .details-list {
+    font-size: 17px;
+  }
+  #details-img,
+  h3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .details-list {
+    font-size: 15px;
+  }
+  #details-img,
+  h3 {
+    display: none;
+  }
+}

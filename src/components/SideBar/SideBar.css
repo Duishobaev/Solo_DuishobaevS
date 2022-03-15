@@ -1,0 +1,33 @@
+.sidebar {
+  height: 100vh !important  ;
+  margin-top: 2vh !important;
+  margin-left: 2vh !important;
+}
+
+.sidePaper {
+  padding-top: 5vh !important;
+  background-color: rgba(253, 252, 252, 0.4) !important;
+}
+
+.sideBtn {
+  color: rgb(87, 84, 84) !important;
+  font-family: "Comfortaa", cursive !important;
+}
+
+.sideBtn:hover {
+  color: white !important;
+  font-size: 2.2vh !important;
+  transition: 0.5s !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .sideBtn {
+    font-size: 10px !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .sideBtn {
+    display: none !important;
+  }
+}

@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+  .search {
+    margin-top: 2vh !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .search {
+    width: 95% !important;
+  }
+}

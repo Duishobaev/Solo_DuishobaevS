@@ -1,0 +1,27 @@
+.progWrap {
+  max-height: 100% !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-around;
+  background-image: url();
+}
+
+@media screen and (max-width: 425px) {
+  .cardSub {
+    width: 300px !important;
+    height: 100% !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .cardSub {
+    width: 260px !important;
+    height: 100% !important;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .cardSub {
+    height: 95% !important;
+  }
+}
