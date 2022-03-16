@@ -190,19 +190,6 @@ const ProductContextProvider = ({ children }) => {
     }
   }
 
-  function checkLikeInCart(id) {
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    if (cart) {
-      let newCart = cart.products.filter((elem) => elem.item.id == id);
-      return newCart.length > 0 ? true : false;
-    } else {
-      cart = {
-        product: [],
-        totalPrice: 0,
-      };
-    }
-  }
-
   //cart end
 
   const values = {
@@ -221,7 +208,6 @@ const ProductContextProvider = ({ children }) => {
     changeProductCount,
     deleteCartProducts,
     checkProductInCart,
-    checkLikeInCart,
     cart: state.cart,
   };
   return (

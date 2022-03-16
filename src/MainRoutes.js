@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import Contacts from "./components/Contacts/Contacts";
+import Contacts from "./components/Reviews/Reviews";
 import { useAuth } from "./contexts/AuthContext";
 import { ADMIN } from "./helpers/consts";
 import AboutUsPage from "./pages/AboutUsPage";
@@ -17,6 +17,7 @@ import ProgramsPage from "./pages/ProgramsPage";
 import NewsPage from "./pages/NewsPage";
 import GalleryPage from "./pages/GalleryPage";
 import AppoinmentsPage from "./pages/AppoinmentsPage";
+import Reviews from "./components/Reviews/Reviews";
 
 const MainRoutes = () => {
   const { user } = useAuth();
@@ -48,8 +49,8 @@ const MainRoutes = () => {
       id: 6,
     },
     {
-      link: "/contacts",
-      element: <Contacts />,
+      link: "/reviews",
+      element: <Reviews />,
       id: 7,
     },
     // {

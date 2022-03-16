@@ -8,6 +8,8 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { useProducts } from "../../contexts/ProductContext";
+import "./Cart.css";
+import { Delete } from "@mui/icons-material";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -51,25 +53,9 @@ export default function Cart() {
     getCart();
   });
 
-  const cartCleaner = () => {
-    localStorage.removeItem("cart");
-    getCart();
-  };
-
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
-        <TableHead>
-          <TableRow>
-            <StyledTableCell>Picture</StyledTableCell>
-            <StyledTableCell align="right">Name</StyledTableCell>
-            <StyledTableCell align="right">Type</StyledTableCell>
-            <StyledTableCell align="right">Description</StyledTableCell>
-            <StyledTableCell align="right">Price</StyledTableCell>
-            <StyledTableCell align="right">Count</StyledTableCell>
-            <StyledTableCell align="right">Subprice</StyledTableCell>
-          </TableRow>
-        </TableHead>
+    <TableContainer className="favorWrap" component={Paper}>
+      <Table aria-label="customized table">
         <TableBody>
           {cart.products.map((row) => (
             <StyledTableRow key={row.name}>
@@ -77,22 +63,15 @@ export default function Cart() {
                 <img
                   src={row.item.picture}
                   alt=""
-                  style={{ width: "70px", height: "70px" }}
+                  style={{ width: "20vw", height: "30vh" }}
                 />
               </StyledTableCell>
               <StyledTableCell align="right">{row.item.name}</StyledTableCell>
-              <StyledTableCell align="right">{row.item.type}</StyledTableCell>
+
               <StyledTableCell align="right">
                 {row.item.description}
               </StyledTableCell>
-              <StyledTableCell align="right">{row.price}</StyledTableCell>
-              <StyledTableCell align="right">
-                <input type="number" value={row.count} />
-              </StyledTableCell>
-              {""}
-              <StyledTableCell align="right">
-                <delete />
-              </StyledTableCell>
+              <StyledTableCell align="right">{row.item.price}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>

@@ -12,7 +12,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const images = [
   {
     imgPath:
-      "https://i.insider.com/57ab6960ce38f2d6038b5e4e?width=907&format=jpeg",
+      "https://kidsafeqld.com.au/wp-content/uploads/2020/08/kidsafe-qld-happy-children-home-hero-banner.jpeg",
   },
   {
     imgPath:
@@ -98,7 +98,7 @@ const Home = () => {
         </div>
         <div className={classes.intro3}>
           <div className={classes.intro3_title}>
-            <h2>Возрастные группы</h2>
+            <h3>Возрастные группы</h3>
           </div>
           <div className={classes.intro3_cards}>
             <div className={classes.junior}>
@@ -159,55 +159,35 @@ const Home = () => {
           </div>
         </div>
         <div className={classes.intro4}>
-          <div className={classes.prefooter}>
-            <img
-              src="https://i.pinimg.com/originals/19/46/9a/19469aed7f222d6009f48158a682bb9c.png"
-              alt=""
-            />
-            <div className={classes.prefooter_descr}>
-              <h4>Квалифицированные воспитатели</h4>
-              <p>
-                {" "}
-                Опыт работы педагогов от 10 лет Найдем подход к любому ребенку
-              </p>
-            </div>
-          </div>
-          <div className={classes.prefooter}>
-            <img
-              src="https://library.kissclipart.com/20180922/age/kissclipart-clip-art-clipart-computer-icons-clip-art-344bb64f68006606.png"
-              alt=""
-            />
-            <div className={classes.prefooter_descr}>
-              <h4>Уникальные методики</h4>
-              <p>
-                {" "}
-                Программы соответствуют стандартам образования для детей от 8
-                мес. до 11 лет
-              </p>
-            </div>
-          </div>
-          <div className={classes.prefooter}>
-            <img
-              src="http://www.unicef.org.hk/wp-content/uploads/4000/06/Uprooted_2017_13_235x235_Icon5_Protect_children.png"
-              alt=""
-            />
-            <div className={classes.prefooter_descr}>
-              <h4>Индивидуальный подход</h4>
-              <p>
-                {" "}
-                Открываем таланты: развиваем умственные и творческие способности
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className={classes.intro5}>
-          <div className={classes.intro5_title}>
-            <p>Наши Занятия</p>
-            <a href="/programs">
-              <ArrowForwardSharpIcon />
-            </a>
+          <div className={classes.prefooter_descr}>
+            <h4>Квалифицированные воспитатели</h4>
+            <p>
+              Опыт работы педагогов от 10 лет Найдем подход к любому ребенку
+            </p>
           </div>
 
+          <div className={classes.prefooter_descr}>
+            <h4>Уникальные методики</h4>
+            <p>
+              Программы соответствуют стандартам образования для детей от 8 мес.
+              до 11 лет
+            </p>
+          </div>
+
+          <div className={classes.prefooter_descr}>
+            <h4>Индивидуальный подход</h4>
+            <p>
+              Открываем таланты: развиваем умственные и творческие способности
+            </p>
+          </div>
+        </div>
+        <div className={classes.intro5_pre}>
+          <h3>Наши Занятия</h3>
+          <a href="/programs">
+            <ArrowForwardSharpIcon />
+          </a>
+        </div>
+        <div className={classes.intro5}>
           <div className={classes.intro5_cards}>
             <div className={classes.intro5_cards__first}>
               <div className={classes.intro5_cards__first_des}>

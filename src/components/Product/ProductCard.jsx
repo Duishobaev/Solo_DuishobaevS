@@ -11,16 +11,10 @@ import { useNavigate } from "react-router-dom";
 import { IconButton } from "@mui/material";
 import { ADMIN } from "../../helpers/consts";
 import classes from "./ProductCard.module.css";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import StarIcon from "@mui/icons-material/Star";
 
 export default function MediaCard({ item }) {
-  const {
-    deleteProduct,
-    addProductToCart,
-    checkProductInCart,
-    checkLikeInCart,
-  } = useProducts();
+  const { deleteProduct, addProductToCart, checkProductInCart } = useProducts();
 
   const {
     user: { email },
@@ -73,14 +67,9 @@ export default function MediaCard({ item }) {
           </div>
         ) : (
           <IconButton onClick={() => addProductToCart(item)}>
-            <FavoriteIcon color={checkLikeInCart(item.id) ? "secondary" : ""} />
+            <StarIcon color={checkProductInCart(item.id) ? "secondary" : ""} />
           </IconButton>
         )}
-        <IconButton onClick={() => addProductToCart(item)}>
-          <ShoppingCartIcon
-            color={checkProductInCart(item.id) ? "secondary" : ""}
-          />
-        </IconButton>
       </CardActions>
     </Card>
   );

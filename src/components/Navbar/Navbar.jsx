@@ -14,6 +14,8 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import { ADMIN } from "../../helpers/consts";
 import { Badge } from "@mui/material";
+import StarIcon from "@mui/icons-material/Star";
+import { useProducts } from "../../contexts/ProductContext";
 
 const pages = [
   {
@@ -33,7 +35,7 @@ const pages = [
   },
   {
     name: "Отзывы",
-    link: "/contacts",
+    link: "/reviews",
     id: "6",
   },
 ];
@@ -44,6 +46,7 @@ const Navbar = () => {
     handleLogout,
     user: { email },
   } = useAuth();
+  const { cart } = useProducts();
 
   // const [navbar, setNavbar] = React.useState(false);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -199,11 +202,10 @@ const Navbar = () => {
               <Link to="/cart">
                 <Button sx={{ my: 2, color: "white" }}>
                   <Badge
-                    // badgeContent={cart?.products ? cart.products.length : 0}
-                    badgeContent={0}
+                    badgeContent={cart?.products ? cart.products.length : 0}
                     color="secondary"
                   >
-                    {/* <ShoppingCartIcon /> */}
+                    <StarIcon />
                   </Badge>
                 </Button>
               </Link>
